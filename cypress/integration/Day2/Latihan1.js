@@ -7,6 +7,7 @@ describe('kumpulan test case',function(){
         cy.get('#genterWrapper > .col-md-9 > :nth-child(1)').click()
         cy.get('#userNumber').type('088299292')
         cy.get('#hobbiesWrapper > .col-md-9 > :nth-child(1)').click()
+        cy.get('#hobbiesWrapper > .col-md-9 > :nth-child(2) > .custom-control-label').click()
         cy.get('#currentAddress').type('bekasi harapan indah')
         cy.get('#submit').click()
     })
