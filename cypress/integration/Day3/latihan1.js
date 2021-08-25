@@ -3,7 +3,7 @@ describe('kumpulan test case', function () {
         cy.visit('https://ultimateqa.com/simple-html-elements-for-automation/')
         cy.get('#et_pb_contact_name_0').type('Farhan').should('have.value','Farhan')
         cy.get('#et_pb_contact_email_0').type('Farhan@gmail.com').should('have.value','Farhan@gmail.com')
-        cy.get('.et_pb_contact_submit').click()
+        cy.contains('Email Me!').click()
         cy.contains('Please refresh the page and try again.').should('exist')
 
     })
@@ -19,7 +19,7 @@ describe('kumpulan test case', function () {
     })
     it('4. Pilih dropdown “Audi”.', function(){
         cy.visit('https://ultimateqa.com/simple-html-elements-for-automation/')
-        cy.get('select').select('Audi').should('be.visible')
+        cy.get('select').select('Audi').should('have.value','audi')
     })
     it('5. Klik tombol “Click Me”.', function(){
         cy.visit('https://ultimateqa.com/simple-html-elements-for-automation/')
