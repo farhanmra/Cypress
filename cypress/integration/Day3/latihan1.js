@@ -19,7 +19,7 @@ describe('kumpulan test case', function () {
     })
     it('4. Pilih dropdown “Audi”.', function(){
         cy.visit('https://ultimateqa.com/simple-html-elements-for-automation/')
-        cy.get('select').select('Audi').should('be.selected','Audi')
+        cy.get('select').select('Audi').should('be.visible')
     })
     it('5. Klik tombol “Click Me”.', function(){
         cy.visit('https://ultimateqa.com/simple-html-elements-for-automation/')
