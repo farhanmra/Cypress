@@ -3,19 +3,22 @@ describe('kumpulan test case', function () {
         cy.bukaUrl()
         cy.get(':nth-child(5) > .card > :nth-child(1) > .card-img-top').click()
         cy.get('.col-sm-12 > .btn').click()
+        cy.wait(2000)
         cy.go('back')
         cy.go('back')
-        cy.wait(1000)
+        
         cy.get(':nth-child(3) > .card > :nth-child(1) > .card-img-top').click()
         cy.get('.col-sm-12 > .btn').click()
+        cy.wait(2000)
         cy.go('back')
         cy.go('back')
-        cy.wait(1000)
+        
         cy.get(':nth-child(1) > .card > .card-block > .card-title > .hrefch').click()
         cy.get('.col-sm-12 > .btn').click()
+        cy.wait(2000)
         cy.go('back')
         cy.go('back')
-        cy.wait(1000)
+        
         cy.get('#cartur').click()
         cy.wait(10000)
         cy.get('.col-lg-1 > .btn').click()
@@ -29,6 +32,8 @@ describe('kumpulan test case', function () {
         cy.wait(1000)
         cy.get('#orderModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
         cy.contains('Thank you for your purchase!').should('exist')
+        cy.wait(10000)
+        cy.get('.confirm').click()
     })
 
     Cypress.on('uncaught:exception', (err, runnable)=>{
