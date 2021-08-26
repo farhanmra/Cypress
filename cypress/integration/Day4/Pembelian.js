@@ -1,6 +1,9 @@
 describe('kumpulan test case', function () {
-    it('pembelian', function(){
+    before(()=>{
         cy.bukaUrl()
+    })
+    it('pembelian', function(){
+        
         cy.get(':nth-child(5) > .card > :nth-child(1) > .card-img-top').click()
         cy.get('.col-sm-12 > .btn').click()
         cy.wait(2000)
