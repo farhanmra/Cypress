@@ -17,3 +17,5 @@ Cypress.Commands.add('daftar',()=>{
 Cypress.Commands.add('bukaUrl',()=>{
     cy.visit('https://www.demoblaze.com/index.html')
 })
+
+import "cypress-file-upload"
